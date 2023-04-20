@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: yellow;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    background-color: orange;
+    padding: 30px;
+    width: 250px;
+    height: 400px;
+    max-width: 100%;
+    border: solid 5px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu, .header__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.menu, .header__menu li:hover {
+    background-color: white;
+}
+
+.menu, .header__menu li:active {
+    background-color: orange;
+}
+
+.menu, .header__menu li a:hover {
+    color: black;
+}
+
+.header__logo {
+    width: 80px;
+}
+.menu, .header__menu li {
+    background-color: black;
+    padding: 5px 10px;
+}
+
+/*mobile first*/
+.filtro__padre-cards {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 780px) {
+    .filtro__padre-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .filtro__padre-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card h4, .card p, .card button {
+    margin-top: 15px;
+}
+
+.card p {
+    text-align: center;
+}
+
+.card button {
+    border: none;
+    padding: 8px 15px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/*PSEUDO*/
+/*dar estilos al primer hijo de un elemento*/
+.pseudo li:first-child {
+    background-color: green;
+}
+
+.filtro__padre-cards .card:first-child {
+    background-color: green;
+}
+
+/*estilos al ultimo hijo*/
+.pseudo li:last-child {
+    background-color: red;
+}
+
+.filtro__padre-cards .card:last-child {
+    background-color: black;
+}
+
+/*seleccionar hijos que no sean el ultimo ni el primero*/
+.pseudo li:nth-child(2) {
+    background-color: blue;
+}
+
+.pseudo li:nth-child(3) {
+    background-color: pink;
+    color: black;
+}
+
+/*estilos solo a los pares*/
+.pseudo2 li:nth-child(even) {
+    background-color: blue;
+}
+
+/*estilos solo a los impares*/
+.pseudo2 li:nth-child(odd) {
+    background-color: orangecc;
+}
+
+/*filtro de productos*/
+.filtro__container-opciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filtro__container-opciones label {
+    cursor: pointer;
+    padding: 8px 15px;
+}
+
+.filtro__container-opciones label:nth-child(odd) {
+    background-color: red;
+}
+
+.filtro__container-opciones label:nth-child(even) {
+    background-color: green;
+}
+
+/*ocultar los radio*/
+#remeras, #notebook, #todos {
+    display: none;
+}
+
+.remeras, .notebook {
+    display: none;
+}
+
+#remeras:checked ~ .filtro__padre-cards .remeras, #notebook:checked ~ .filtro__padre-cards .notebook {
+    display: flex;
+}
+
+#todos:checked ~ .filtro__padre-cards .remeras, #todos:checked ~ .filtro__padre-cards .notebook {
+    display: flex;
+} 
+
+/*pseudo elemento*/
+.pseudo-elemento:before {
+    content: 'L';
+    font-size: 60px;
+}
+
+.pseudo-elemento:after {
+    content: '"';
+    font-size: 60px;
+}
+
+/*GRILLA DE BOOTSTRAP*/
+
+.parrafo-row1 {
+    background-color: green;
+}
+
+.parrafo-row2 {
+    background-color: red;
+}
+
+.parrafo-row3 {
+    background-color: blue;
+}
+
+.parrafo-row4 {
+    background-color: orange;
+}
+
+.navbar {
+    width: 100%;
+}
+
+
+/*EJEMPLO BOOTSTRAP DESDE CERO*/
+.nav-item:hover {
+    background-color: orange;
+}
+
+.carousel-item img {
+    height: 250px;
+}
+
+@media (min-width: 992px) {
+    .carousel-item img {
+        height: 400px;
+    }
+}
+
+#carouselExampleCaptions {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.redes img {
+    width: 40px;
+}
+
+.redes {
+    gap: 20px;
+    padding-bottom: 10px;
+}
