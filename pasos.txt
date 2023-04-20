@@ -8,3 +8,10 @@ Crear repo en GIT:
 Crear ramas:
 1. Saber en cuál ramas estoy: git branch
 2. Crear nueva rama: git branch nombreDeRama
+3. Trabajar lo que necesitemos en la rama, hacer add y commit
+
+Hacer el merge:
+1. Una vez que tengamos todo añadido y comitteado en la rama, volver a la carpeta main
+2. Una vez en la carpeta main, ejecutar: git merge nombreDeRama
+3. En nombreDeRama va el nombre que le hayan puesto a la rama que quieren fusionar
+4. Listo
