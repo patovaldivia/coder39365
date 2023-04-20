@@ -1,0 +1,6 @@
+Crear repo en GIT:
+1. Abrir la carpeta donde vayan a trabajar. Ya sea con BASH o VSCode.
+2. Agregar primer comando: git init
+3. Agregar todos los archivos: git add .
+4. Verificación de status, siempre que quieran ya que solo es informativo: git status\
+5. Confirmar los cambios con: git commit - m "Algun mensaje descriptivo"
